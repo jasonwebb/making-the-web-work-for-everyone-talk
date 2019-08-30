@@ -7,18 +7,16 @@
 
 ## Installation
 
+1. Install [SoX](http://sox.sourceforge.net/)
+
 1. Install dependencies
    ```
    npm install
    ```
 
-1. Install [SoX](http://sox.sourceforge.net/)
-
-1. 
-
 1. Serve the presentation and monitor source files for changes
    ```
-   npm start
+   npm run serve
    ```
 
 ## Technical details
