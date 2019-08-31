@@ -1,0 +1,1 @@
+Use this folder to store credentials for the Google Cloud Platform APIs (`.json` files).
