@@ -9,7 +9,13 @@
 
 1. Install [SoX](http://sox.sourceforge.net/)
 
-1. Install dependencies
+1. Follo the ["Before you begin" steps in the quickstart guide](https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries#before-you-begin) to set up a Google Cloud Platform account
+
+1. Enable the Speech-to-Text API for that account.
+
+1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/#install_the_latest_cloud_sdk_version)
+
+1. Install dependencies for this project
    ```
    npm install
    ```
