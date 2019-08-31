@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/jasonwebb/slide-deck-template#readme",
   "devDependencies": {
+    "@google-cloud/speech": "^3.2.6",
+    "node-record-lpcm16": "^1.0.1",
     "path": "^0.12.7",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
-  }
+  },
+  "dependencies": {}
 }
