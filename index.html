@@ -15,9 +15,10 @@
 
 		<!-- Additional plugins -->
 		<link rel="stylesheet" href="revealjs/plugin/accessibility/helper.css">
+		<link rel="stylesheet" href="revealjs/plugin/subtitles/subtitles.css">
 
 		<!-- Additional packages -->
-		<link rel="stylesheet" href="css/subtitles.css">
+		<link rel="stylesheet" href="revealjs/plugin/subtitles/subtitles.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -28,7 +29,7 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
-	
+
 	<body>
 		<div class="reveal">
 			<div class="slides">
@@ -36,8 +37,6 @@
 				<section>Slide 2</section>
 			</div>
 		</div>
-
-		<div id="subtitles">Hello world</div>
 
 		<script src="revealjs/js/reveal.js"></script>
 
@@ -47,7 +46,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				controls: false,
-				hash: true,
+				history: true,
 				fragmentsInURL: true,
 				dependencies: [
 					{ src: 'revealjs/plugin/markdown/marked.js' },
@@ -56,15 +55,10 @@
 					{ src: 'revealjs/plugin/highlight/highlight.js', async: true },
 					{ src: 'revealjs/plugin/accessibility/helper.js', async: true, condition: function() {
 						return !!document.body.classList;
-					}}
+					}},
+					{ src: 'revealjs/plugin/subtitles/subtitles.js', async: true }
 				]
 			});
-		</script>
-
-		<script src="dist/app.bundle.js"></script>
-
-		<script>
-			// infiniteStream();
 		</script>
 	</body>
 </html>
