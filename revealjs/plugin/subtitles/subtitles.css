@@ -1,20 +1,48 @@
-#subtitles {
+#subtitles-container {
+  /* Positioning and sizing */
+  box-sizing: border-box;
   position: absolute;
   bottom: 10px;
   left: 10px;
-  width: calc(100vw - 60px);
+  width: calc(100vw - 20px);
   z-index: 1;
+  padding: 20px 500px;
 
-  padding: 20px;
+  /* Align subtitles to bottom and center */
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+
+  /* Pass all mouse events through to presentation below */
   pointer-events: none;
 
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
+  /* Typography and colors */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  line-height: 42px;
   color: white;
   text-align: center;
   background-color: rgba(0,0,0,.7);
 }
 
-#subtitles #interim_text {
+  #subtitles-container.hidden {
+    display: none;
+  }
+
+  #subtitles-container #subtitles-inner-container {
+    height: 75px;
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+    #subtitles-container #subtitles-inner-container #subtitles {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+#subtitles-container #subtitles #interim_text {
   opacity: .6;
 }
