@@ -10,13 +10,17 @@
 @import "../template/settings";
 // ---------------------------------------------
 
+// Brand colors --------------------------------
+$brand-color--lightblue: lighten(#2F9BB4, 10%);
 
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/fontawesome/css/fontawesome.min.css);
+@import url(../../lib/font/fontawesome/css/solid.min.css);
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: rgba(0,0,0,.9);
+$backgroundColor: rgb(0,0,0);
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -47,3 +51,92 @@ section.has-light-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+// Custom components ---------------------------
+
+.reveal {
+	section {
+		h2 {
+			font-size: 130px;
+			line-height: 110px;
+			font-weight: 900;
+			text-align: left;
+		}
+
+		p {
+			&.is-large {
+				font-size: 80px;
+				line-height: 70px;
+				font-weight: bold;
+				text-align: left;
+			}
+		}
+
+		.is-highlighted {
+			color: $brand-color--lightblue;
+		}
+
+		.media-object {
+			display: flex;
+
+			.icon {
+				flex: 0 auto;
+				margin-top: -10px;
+				margin-right: 40px;
+				text-align: center;
+				color: $brand-color--lightblue;
+
+				.fas {
+					font-size: 140px;
+				}
+			}
+
+			.content {
+				flex: 1 auto;
+				text-align: left;
+
+				h2 {
+					text-transform: none;
+				}
+
+				p {
+					margin-top: 30px;
+					opacity: .6;
+				}
+			}
+		}
+	
+		ul.block-list {
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		
+			li {
+				margin-bottom: 20px;
+				padding: 10px 30px;
+				background-color: rgba(255,255,255,.1);
+				transition: all .3s ease-in-out !important;
+				border: 1px solid rgba(0,0,0,0);
+	
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+	
+				&.fragment {
+					&.visible {
+						opacity: .5;
+					}
+	
+					&.current-fragment {
+						padding-left: 40px;
+						opacity: 1;
+						background-color: rgba(255,255,255,.15);
+						border: 1px solid rgba(255,255,255,.4);
+					}
+				}
+			}
+		}
+	}
+}
