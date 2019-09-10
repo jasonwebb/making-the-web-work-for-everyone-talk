@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="revealjs/css/reset.css">
 		<link rel="stylesheet" href="revealjs/css/reveal.css">
-		<link rel="stylesheet" href="revealjs/css/theme/night.css">
+		<link rel="stylesheet" href="revealjs/css/theme/accessible360.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="revealjs/lib/css/monokai.css">
@@ -30,8 +30,294 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- 
+				==================
+					1. Title slide 
+				==================
+				-->
+				<section>
+					<h1>[Title of talk]</h1>
+				</section>
+
+
+				<!-- 
+				========================
+					2. Self introduction 
+				========================
+				-->
+				<section>
+					<!--
+						Jason Webb
+						Developer Advocate at Accessible360
+					-->
+					<h2>Jason Webb</h2>
+					<p>Developer Advocate at Accessible360</p>
+				</section>
+
+
+				<!-- 
+				=================================
+					3. Accessible360 introduction 
+				=================================
+				-->
+				<section>
+					<!--
+						Accessible360
+						- Wordmark + mission statement
+						- Team photo
+						- What we do
+					-->
+					<h2>Accessible360</h2>
+					<p>We do web and mobile accessibility auditing </p>
+				</section>
+
+
+				<!-- 
+				=============
+					4. Agenda 
+				=============
+				-->
+				<section>
+					<ul class="block-list">
+						<li class="fragment visible current-fragment">What is digital accessibility?</li>
+						<li class="fragment">Why does it matter?</li>
+						<li class="fragment">How do I build accessible stuff?</li>
+						<li class="fragment">Live demos!</li>
+						<li class="fragment">Testing for accessibility</li>
+						<li class="fragment">How can <b>you</b> make things better?</li>
+						<li class="fragment">Learning more</li>
+					</ul>
+				</section>
+
+
+				<!-- 
+				=====================================
+					5. What is digital accessibility? 
+				=====================================
+				-->
+				<section>
+					<h2 class="mega-title">What is <span class="is-highlighted">digital accessibility?</span></h2>
+				</section>
+
+					<section>
+						<p class="is-large"><span class="is-highlighted">Process of removing and preventing barriers</span> to access so everyone can enjoy your work equally.</p>
+					</section>
+
+					<!-- Physical -->
+					<section data-transition="fade">
+						<div class="media-object">
+							<div class="icon">
+								<span class="fas fa-child" aria-hidden="true"></span>
+							</div>
+
+							<div class="content">
+								<h2>Physical</h2>
+								<p>Muscle control limitations, joint disorders, missing limbs</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Auditory -->
+					<section data-transition="fade">
+						<div class="media-object">
+							<div class="icon">
+								<span class="fas fa-deaf" aria-hidden="true"></span>
+							</div>
+
+							<div class="content">
+								<h2>Auditory</h2>
+								<p>Partial or complete loss of hearing in one or both ears</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Visual -->
+					<section data-transition="fade">
+						<div class="media-object">
+							<div class="icon">
+								<span class="fas fa-blind" aria-hidden="true"></span>
+								<span class="fas fa-low-vision" aria-hidden="true"></span>
+							</div>
+
+							<div class="content">
+								<h2>Visual</h2>
+								<p>Partial vision loss ("low vision"), or complete loss ("blindness"). Also includes people with reduced or increased sensitivity to certain colors ("color blindness").</p>
+							</div>
+						</div>
+					</section>
+					
+					<!-- Cognitive -->
+					<section data-transition="fade">
+						<div class="media-object">
+							<div class="icon">
+								<span class="fas fa-brain" aria-hidden="true"></span>
+							</div>
+
+							<div class="content">
+								<h2>Cognitive</h2>
+								<p>Cognitive, learning, and neurological disorders including neurodiversity, neurological, behavioral, and mental health disorders.</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Temporary -->
+					<section data-transition="fade">
+						<div class="media-object">
+							<div class="icon">
+								<span class="fas fa-user-injured" aria-hidden="true"></span>
+							</div>
+
+							<div class="content">
+								<h2>Temporary</h2>
+								<p>Broken limbs, vertigo or fatigue after medical procedures, recovery from accidents, undergoing physical theraphy.</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Situational -->
+					<section data-transition="fade">
+						<div class="media-object">
+							<div class="icon">
+								<span class="fas fa-car-crash" aria-hidden="true"></span>
+							</div>
+
+							<div class="content">
+								<h2>Situational</h2>
+								<p>High-stress environments like disaster/accident scenarios, distraction, broken trackpad/mouse forcing keyboard use.</p>
+							</div>
+						</div>
+					</section>
+
+
+				<!-- 
+				==========================
+					6. Why does it matter? 
+				==========================
+				-->
+				<!-- <section>
+					<h2>Legal landscape</h2>
+
+					<ul class="columns">
+						<li class="fragment">
+							<h3>Rehabilitation Act of 1973</h3>
+						</li>
+
+						<li class="fragment">
+							<h3>Americans with Disabilities Act (ADA) - 1998</h3>
+							<p>Public and commercial contexts</p>
+						</li>
+
+						<li class="fragment">
+							<h3>Section 508 and 504</h3>
+							<p>Government contexts and groups receiving federal aid (like public schools, health care, etc)</p>
+						</li>
+
+						<li class="fragment">
+							<h3>Case law</h3>
+							<p>lksjdf</p>
+						</li>
+
+						<li class="fragment">
+							<h3>International law</h3>
+							<p>test</p>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>For businesses</h2>
+
+					<ul>
+						<li>Reduce risk of legal action (demand letters, lawsuits, etc)</li>
+						<li>Considering accessibility throughout the SDLC is far easier and cheaper than trying to hack and layer it in during a crisis.</li>
+						<li>Reach a larger market share, potentially cornering a market segment that has been underserved.</li>
+						<li>Improve company image by engaging in objectively positive, socially responsible activity.</li>
+						<li>Spend money on talent, not on lawyers!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>For developers</h2>
+
+					<ul>
+						<li>Because it relies heavily on using native tech as intended, it naturally encourages cleaner code that is easier to maintain.</li>
+						<li>Sought after skill in modern market, and is increasing in value right now</li>
+						<li>Personal and professional growth. Learning new things is important.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>For everyone</h2>
+
+					<ul>
+						<li>It’s the right thing to do.</li>
+						<li>Many accessibility enhancements improve user experience for everyone. Reference the curb cuts effect - when accessibility benefits everyone.</li>
+					</ul>
+				</section> -->
+
+
+				<!-- 
+				=======================================
+					7. How do I build accessible stuff? 
+				=======================================
+				-->
+				<!-- GIF of Kevin -->
+				<!-- <section>
+					
+				</section> -->
+
+					<!-- add GIF background -->
+					<!-- <section>
+						WCAG to the rescue!
+					</section> -->
+					
+					<!-- <section>
+						WCAG 
+					</section> -->
+
+
+				<!-- 
+				=================
+					8. Live demos 
+				=================
+				-->
+				<!-- <section>
+					<ul>
+						<li>What's that site?</li>
+					</ul>
+				</section> -->
+
+
+				<!-- 
+				==============
+					9. Testing
+				============== 
+				-->
+				<!-- <section>
+					Testing for accessibility
+				</section> -->
+
+
+				<!--
+				======================== 
+					10. How can you help 
+				========================
+				-->
+				<!-- <section></section> -->
+
+				<!-- 
+				=====================
+					11. Learning more 
+				=====================
+				-->
+				<!-- <section></section> -->
+
+				<!--
+				=========================================== 
+					12. Thank you and invitation to connect 
+				===========================================
+				-->
+				<!-- <section></section> -->
 			</div>
 		</div>
 
@@ -42,9 +328,15 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				controls: false,
+				// controls: false,
 				history: true,
 				fragmentsInURL: true,
+				navigationMode: "linear",
+				// width: "100%",
+				// height: "100%",
+				// margin: 0,
+				// minScale: 1,
+				// maxScale: 1,
 				dependencies: [
 					{ src: 'revealjs/plugin/markdown/marked.js' },
 					{ src: 'revealjs/plugin/markdown/markdown.js' },
@@ -53,7 +345,7 @@
 					{ src: 'revealjs/plugin/accessibility/helper.js', async: true, condition: function() {
 						return !!document.body.classList;
 					}},
-					{ src: 'revealjs/plugin/subtitles/subtitles.js', async: true }
+					// { src: 'revealjs/plugin/subtitles/subtitles.js', async: true }
 				]
 			});
 		</script>
