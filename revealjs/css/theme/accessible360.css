@@ -17,7 +17,7 @@ body {
   background-color: black; }
 
 .reveal {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
   color: #fff; }
@@ -48,7 +48,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -275,19 +275,35 @@ body {
     background-color: black; } }
 
 .reveal section h2 {
-  font-size: 130px;
-  line-height: 110px;
-  font-weight: 900;
-  text-align: left; }
+  margin: 0; }
+  .reveal section h2.is-centered {
+    text-align: center !important; }
+  .reveal section h2.is-large {
+    font-size: 100px;
+    line-height: 90px;
+    font-weight: 900;
+    text-align: left; }
+    .reveal section h2.is-large .icon {
+      margin-top: 40px;
+      font-size: 200px; }
+  .reveal section h2 .is-background {
+    background-color: black;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+    line-height: 145px;
+    padding: 0 20px; }
+  .reveal section h2 + .block-list {
+    margin-top: 30px !important; }
 
 .reveal section p.is-large {
   font-size: 80px;
-  line-height: 70px;
+  line-height: 80px;
   font-weight: bold;
   text-align: left; }
 
 .reveal section .is-highlighted {
-  color: #47b5cf; }
+  color: #47b5cf !important; }
 
 .reveal section .media-object {
   display: flex; }
@@ -298,13 +314,15 @@ body {
     text-align: center;
     color: #47b5cf; }
     .reveal section .media-object .icon .fas {
-      font-size: 140px; }
+      font-size: 140px;
+      margin-bottom: 30px; }
   .reveal section .media-object .content {
     flex: 1 auto;
     text-align: left; }
     .reveal section .media-object .content h2 {
       text-transform: none; }
     .reveal section .media-object .content p {
+      line-height: 45px;
       margin-top: 30px;
       opacity: .6; }
 
@@ -313,9 +331,13 @@ body {
   width: 100%;
   margin: 0;
   padding: 0; }
+  .reveal section ul.block-list.has-extra-padding li {
+    padding: 20px 60px 20px 30px; }
+  .reveal section ul.block-list.is-compact li {
+    font-size: 30px; }
   .reveal section ul.block-list li {
     margin-bottom: 20px;
-    padding: 10px 30px;
+    padding: 10px 60px 10px 30px;
     background-color: rgba(255, 255, 255, 0.1);
     transition: all .3s ease-in-out !important;
     border: 1px solid rgba(0, 0, 0, 0); }
@@ -328,3 +350,13 @@ body {
       opacity: 1;
       background-color: rgba(255, 255, 255, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.4); }
+    .reveal section ul.block-list li p {
+      margin: 0;
+      font-size: 50px; }
+      .reveal section ul.block-list li p.title {
+        font-weight: bold;
+        line-height: 50px; }
+      .reveal section ul.block-list li p.subtitle {
+        font-size: 30px;
+        opacity: .6;
+        margin: 10px 0; }

@@ -26,8 +26,8 @@ $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: Arial, Helvetica, sans-serif;
+$headingFont: Arial, Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -58,25 +58,52 @@ section.has-light-background {
 .reveal {
 	section {
 		h2 {
-			font-size: 130px;
-			line-height: 110px;
-			font-weight: 900;
-			text-align: left;
+			margin: 0;
+
+			&.is-centered {
+				text-align: center !important;
+			}
+
+			&.is-large {
+				font-size: 100px;
+				line-height: 90px;
+				font-weight: 900;
+				text-align: left;
+
+				.icon {
+					margin-top: 40px;
+					font-size: 200px;
+				}
+			}
+
+			.is-background {
+				background-color: rgba(0,0,0,1);
+				box-decoration-break: clone;
+				-webkit-box-decoration-break: clone;
+				display: inline;
+				line-height: 145px;
+				padding: 0 20px;
+			}
+
+			& + .block-list {
+				margin-top: 30px !important;
+			}
 		}
 
 		p {
 			&.is-large {
 				font-size: 80px;
-				line-height: 70px;
+				line-height: 80px;
 				font-weight: bold;
 				text-align: left;
 			}
 		}
 
 		.is-highlighted {
-			color: $brand-color--lightblue;
+			color: $brand-color--lightblue !important;
 		}
 
+		// Media object - icon on left, title and content on right
 		.media-object {
 			display: flex;
 
@@ -89,6 +116,7 @@ section.has-light-background {
 
 				.fas {
 					font-size: 140px;
+					margin-bottom: 30px;
 				}
 			}
 
@@ -101,39 +129,71 @@ section.has-light-background {
 				}
 
 				p {
+					line-height: 45px;
 					margin-top: 30px;
 					opacity: .6;
 				}
 			}
 		}
-	
-		ul.block-list {
-			list-style: none;
-			width: 100%;
-			margin: 0;
-			padding: 0;
-		
-			li {
-				margin-bottom: 20px;
-				padding: 10px 30px;
-				background-color: rgba(255,255,255,.1);
-				transition: all .3s ease-in-out !important;
-				border: 1px solid rgba(0,0,0,0);
-	
-				&:last-of-type {
-					margin-bottom: 0;
-				}
-	
-				&.fragment {
-					&.visible {
-						opacity: .5;
+
+		ul {
+			// Stack of horizontal bars
+			&.block-list {
+				list-style: none;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+
+				&.has-extra-padding {
+					li {
+						padding: 20px 60px 20px 30px;
 					}
-	
-					&.current-fragment {
-						padding-left: 40px;
-						opacity: 1;
-						background-color: rgba(255,255,255,.15);
-						border: 1px solid rgba(255,255,255,.4);
+				}
+
+				&.is-compact {
+					li {
+						font-size: 30px;
+					}
+				}
+
+				li {
+					margin-bottom: 20px;
+					padding: 10px 60px 10px 30px;
+					background-color: rgba(255,255,255,.1);
+					transition: all .3s ease-in-out !important;
+					border: 1px solid rgba(0,0,0,0);
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+
+					&.fragment {
+						&.visible {
+							opacity: .5;
+						}
+
+						&.current-fragment {
+							padding-left: 40px;
+							opacity: 1;
+							background-color: rgba(255,255,255,.15);
+							border: 1px solid rgba(255,255,255,.4);
+						}
+					}
+
+					p {
+						margin: 0;
+						font-size: 50px;
+
+						&.title {
+							font-weight: bold;
+							line-height: 50px;
+						}
+
+						&.subtitle {
+							font-size: 30px;
+							opacity: .6;
+							margin: 10px 0;
+						}
 					}
 				}
 			}
