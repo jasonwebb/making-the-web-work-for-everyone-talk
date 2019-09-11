@@ -1,0 +1,224 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Brand colors --------------------------------
+$brand-color--lightblue: lighten(#2F9BB4, 0%);
+$brand-color--blue: #007694;
+$brand-color--darkblue: #1a6c80;
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/fontawesome/css/fontawesome.min.css);
+@import url(../../lib/font/fontawesome/css/solid.min.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: rgba(255,255,255,1);
+
+$mainColor: rgba(0,0,0,.8);
+$headingColor: $mainColor;
+
+$mainFontSize: 42px;
+$mainFont: Arial, Helvetica, sans-serif;
+$headingFont: Arial, Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+// Custom components ---------------------------
+
+.reveal {
+	.controls {
+		color: black;
+	}
+
+	.progress {
+		color: black;
+	}
+
+	section {
+		h1 {
+			margin: 0;
+		}
+
+		h2 {
+			margin: 0;
+
+			&.is-centered {
+				text-align: center !important;
+			}
+
+			&.is-large {
+				font-size: 100px;
+				line-height: 90px;
+				font-weight: 900;
+				text-align: left;
+
+				.icon {
+					margin-top: 40px;
+					font-size: 200px;
+				}
+			}
+
+			.is-background {
+				background-color: rgba(0,0,0,1);
+				color: #fff;
+				box-decoration-break: clone;
+				-webkit-box-decoration-break: clone;
+				display: inline;
+				line-height: 145px;
+				padding: 0 20px;
+			}
+
+			& + .block-list {
+				margin-top: 30px !important;
+			}
+		}
+
+		p {
+			&.is-large {
+				font-size: 80px;
+				line-height: 80px;
+				font-weight: bold;
+				text-align: left;
+			}
+		}
+
+		img {
+			border: 0;
+			box-shadow: none;
+		}
+
+		.is-highlighted {
+			color: $brand-color--lightblue !important;
+		}
+
+		// Media object - icon on left, title and content on right
+		.media-object {
+			display: flex;
+
+			.icon {
+				flex: 0 auto;
+				margin-top: -10px;
+				margin-right: 40px;
+				text-align: center;
+				color: $brand-color--lightblue;
+
+				.fas {
+					font-size: 140px;
+					margin-bottom: 30px;
+				}
+			}
+
+			.content {
+				flex: 1 auto;
+				text-align: left;
+
+				h2 {
+					text-transform: none;
+				}
+
+				p,
+				ul {
+					line-height: 45px;
+					margin-top: 30px;
+					opacity: .6;
+				}
+			}
+		}
+
+		ul {
+			// Stack of horizontal bars
+			&.block-list {
+				list-style: none;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+
+				&.has-extra-padding {
+					li {
+						padding: 20px 60px 20px 30px;
+					}
+				}
+
+				&.is-compact {
+					li {
+						font-size: 30px;
+					}
+				}
+
+				li {
+					margin-bottom: 20px;
+					padding: 10px 60px 10px 30px;
+					background-color: rgba(0,0,0,.6);
+					font-weight: bold;
+					color: #fff;
+					transition: all .3s ease-in-out !important;
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+
+					&.fragment {
+						&.visible {
+							opacity: .5;
+						}
+
+						&.current-fragment {
+							padding-left: 40px;
+							padding-right: 20px;
+							opacity: 1;
+							background-color: $brand-color--blue;
+						}
+					}
+
+					p {
+						margin: 0;
+						font-size: 50px;
+
+						&.title {
+							font-weight: bold;
+							line-height: 50px;
+						}
+
+						&.subtitle {
+							font-size: 30px;
+							opacity: .6;
+							margin: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
