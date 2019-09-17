@@ -90,6 +90,13 @@ section.has-light-background {
 				}
 			}
 
+			&.is-small {
+				font-size: 75px;
+				line-height: 65px;
+				text-transform: unset;
+				font-weight: 500;
+			}
+
 			.is-background {
 				background-color: rgba(0,0,0,1);
 				color: #fff;
@@ -102,6 +109,16 @@ section.has-light-background {
 
 			& + .block-list {
 				margin-top: 30px !important;
+			}
+
+			.badge {
+				background-color: $brand-color--blue;
+				padding: 20px 30px;
+				border-radius: 100px;
+				color: white;
+				font-weight: bold;
+				margin-bottom: 50px;
+				display: inline-block;
 			}
 		}
 
@@ -180,10 +197,12 @@ section.has-light-background {
 				li {
 					margin-bottom: 20px;
 					padding: 10px 60px 10px 30px;
-					background-color: rgba(0,0,0,.6);
+					background-color: rgba(0,0,0,1);
 					font-weight: bold;
 					color: #fff;
+					outline: 1px solid black;
 					transition: all .3s ease-in-out !important;
+					border: 1px solid rgba(0,0,0,0);
 
 					&:last-of-type {
 						margin-bottom: 0;
@@ -196,9 +215,10 @@ section.has-light-background {
 
 						&.current-fragment {
 							padding-left: 40px;
-							padding-right: 20px;
+							padding-right: 40px;
 							opacity: 1;
 							background-color: $brand-color--blue;
+							outline: 10px solid $brand-color--blue;
 						}
 					}
 

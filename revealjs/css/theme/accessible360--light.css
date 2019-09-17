@@ -295,6 +295,11 @@ body {
     .reveal section h2.is-large .icon {
       margin-top: 40px;
       font-size: 200px; }
+  .reveal section h2.is-small {
+    font-size: 75px;
+    line-height: 65px;
+    text-transform: unset;
+    font-weight: 500; }
   .reveal section h2 .is-background {
     background-color: black;
     color: #fff;
@@ -305,6 +310,14 @@ body {
     padding: 0 20px; }
   .reveal section h2 + .block-list {
     margin-top: 30px !important; }
+  .reveal section h2 .badge {
+    background-color: #007694;
+    padding: 20px 30px;
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: inline-block; }
 
 .reveal section p.is-large {
   font-size: 80px;
@@ -353,19 +366,22 @@ body {
   .reveal section ul.block-list li {
     margin-bottom: 20px;
     padding: 10px 60px 10px 30px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: black;
     font-weight: bold;
     color: #fff;
-    transition: all .3s ease-in-out !important; }
+    outline: 1px solid black;
+    transition: all .3s ease-in-out !important;
+    border: 1px solid rgba(0, 0, 0, 0); }
     .reveal section ul.block-list li:last-of-type {
       margin-bottom: 0; }
     .reveal section ul.block-list li.fragment.visible {
       opacity: .5; }
     .reveal section ul.block-list li.fragment.current-fragment {
       padding-left: 40px;
-      padding-right: 20px;
+      padding-right: 40px;
       opacity: 1;
-      background-color: #007694; }
+      background-color: #007694;
+      outline: 10px solid #007694; }
     .reveal section ul.block-list li p {
       margin: 0;
       font-size: 50px; }
