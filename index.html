@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="revealjs/css/reset.css">
 		<link rel="stylesheet" href="revealjs/css/reveal.css">
-		<link rel="stylesheet" href="revealjs/css/theme/accessible360.css">
+		<link rel="stylesheet" href="revealjs/css/theme/accessible360--dark.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="revealjs/lib/css/monokai.css">
@@ -61,12 +61,7 @@
 				=================================
 				-->
 				<section>
-					<!--
-						Accessible360
-						- Wordmark + mission statement
-						- Team photo
-						- What we do
-					-->
+					<img src="media/accessible360-logo.png" alt="Logo for Accessible360">
 					<h2>Accessible360</h2>
 					<p>We do web and mobile accessibility auditing </p>
 				</section>
@@ -112,7 +107,11 @@
 
 							<div class="content">
 								<h2>Physical</h2>
-								<p>Muscle control limitations, joint disorders, missing limbs</p>
+								<ul>
+									<li>Muscle control limitations</li>
+									<li>Joint disorders</li>
+									<li>Missing limbs</li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -126,7 +125,9 @@
 
 							<div class="content">
 								<h2>Auditory</h2>
-								<p>Partial or complete loss of hearing in one or both ears</p>
+								<ul>
+									<li>Partial or complete loss of hearing in one or both ears</li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -141,7 +142,11 @@
 
 							<div class="content">
 								<h2>Visual</h2>
-								<p>Partial vision loss ("low vision"), or complete loss ("blindness"). Also includes people with reduced or increased sensitivity to certain colors ("color blindness").</p>
+								<ul>
+									<li>Partial vision loss ("low vision")</li>
+									<li>Complete loss ("blindness")</li>
+									<li>Reduced or increased sensitivity to certain colors ("color blindness")</li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -195,14 +200,13 @@
 				==========================
 				-->
 				<section>
-					<h2 class="is-large is-centered">
-						Legal landscape<br>
-						<span class="icon fas fa-gavel is-highlighted" aria-hidden="true"></span>
-					</h2>
+					<h2 class="is-large"><span class="is-highlighted">Why</span> does it matter?</h2>
 				</section>
 
-					<!-- Legal (1) -->
+					<!-- Legal -->
 					<section>
+						<h2><span class="fas fa-gavel is-highlighted" aria-hidden="true"></span> Legal landscape</h2>
+
 						<ul class="block-list has-extra-padding">
 							<li class="fragment visible current-fragment">
 								<p class="title">Rehabilitation Act of 1973</p>
@@ -212,32 +216,17 @@
 								<p class="title">Americans with Disabilities Act (ADA) - 1998</p>
 								<p class="subtitle">Public and commercial contexts</p>
 							</li>
-						</ul>
-					</section>
 
-					<!-- Legal (2) -->
-					<section>
-						<ul class="block-list has-extra-padding">
 							<li class="fragment">
 								<p class="title">Section 508 and 504</p>
 								<p class="subtitle">Government contexts and groups receiving federal aid (like public schools, health care, etc)</p>
-							</li>
-
-							<li class="fragment">
-								<p class="title">Case law</p>
-								<p class="subtitle">Dominos, Winn-Dixie</p>
-							</li>
-
-							<li class="fragment">
-								<p class="title">International law</p>
-								<p class="subtitle">test</p>
 							</li>
 						</ul>
 					</section>
 
 				<!-- Businesses -->
 				<section>
-					<h2>For businesses</h2>
+					<h2><span class="fas fa-building is-highlighted" aria-hidden="true"></span> For businesses</h2>
 
 					<ul class="block-list is-compact">
 						<li class="fragment">Reduce risk of legal action (demand letters, lawsuits, etc)</li>
@@ -253,7 +242,7 @@
 
 				<!-- Developers -->
 				<section>
-					<h2>For developers</h2>
+					<h2><span class="fas fa-code is-highlighted" aria-hidden="true"></span> For developers</h2>
 
 					<ul class="block-list is-compact">
 						<li class="fragment">Because it relies heavily on using native tech as intended, it naturally encourages cleaner code that is easier to maintain.</li>
@@ -280,7 +269,7 @@
 				-->
 				<!-- GIF of Kevin -->
 				<section>
-					<img src="media/kidding-me-kevn.gif" alt="Kevin from The Office saying Are You Kidding Me" width="400px">
+					<img src="media/kidding-me-kevn.gif" alt="Kevin from The Office saying Are You Kidding Me" width="500px">
 				</section>
 
 					<!-- WCAG intro -->
@@ -305,17 +294,61 @@
 						</ul>
 					</section>
 
+				<section>
+					<h2 class="is-large">Use HTML the way it was <span class="is-highlighted">designed</span></h2>
+				</section>
+
+					<section>
+						<h2 class="is-small">Rely on <span class="is-highlighted">semantic, native, and valid markup</span> as much as possible</h2>
+					</section>
+
+					<section>
+						<h2 class="is-small">Use <span class="is-highlighted">ARIA</span> to describe states and relationships to screen readers when native markup doesn't already</h2>
+					</section>
+
 
 				<!--
 				=================
 					8. Live demos
 				=================
 				-->
+				<section data-background-image="media/demo-forms-screenshot.png">
+					<h2 class="is-large is-centered has-background">
+						<span class="is-background">Demo time!</span>
+					</h2>
+				</section>
+					
+				</section>
+				
 				<!-- <section>
 					<ul>
 						<li>What's that site?</li>
 					</ul>
 				</section> -->
+
+				<section>
+					<h2>Demo: forms</h2>
+
+					<a href="https://codepen.io/jasonwebb/pen/VwZGwpQ?editors=1000" class="code-sample-link" target="_blank">
+						Inaccessible example
+					</a>
+
+					<a href="https://codepen.io/jasonwebb/pen/XWrPWGg?editors=1000" class="code-sample-link" target="_blank">
+						Accessible example
+					</a>
+				</section>
+
+				<section>
+					<h2>Demo: page structure</h2>
+
+					<a href="https://codepen.io/jasonwebb/pen/wvwEorp?editors=1000" class="code-sample-link" target="_blank">
+						Inaccessible example
+					</a>
+
+					<a href="https://codepen.io/jasonwebb/pen/ZEzMBRZ?editors=1000" class="code-sample-link" target="_blank">
+						Accessible example
+					</a>
+				</section>
 
 
 				<!--
@@ -323,9 +356,41 @@
 					9. Testing
 				==============
 				-->
-				<!-- <section>
-					Testing for accessibility
-				</section> -->
+				<section>
+					<h2 class="is-large"><span class="is-highlighted">Testing</span> for accessibility</h2>
+				</section>
+
+					<section>
+						<ul class="block-list is-compact">
+							<li><span class="icon fas fa-keyboard" aria-hidden="true"></span> Use only your keyboard to get a decent idea of operability, focus indicators, and focus management.</li>
+							<li><span class="icon fas fa-mobile-alt" aria-hidden="true"></span> Use mobile devices especially iPhones and iPads. They are very popular because of VoiceOver's Rotor.</li>
+							<li><span class="icon fas fa-search-plus" aria-hidden="true"></span> Use extreme zoom and check for content overflows.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Automated testing</h2>
+
+						<h3>Good for:</h3>
+						<ul>
+							<li>Identifying very simple, clear syntax issues like invalid or bad markup use</li>
+							<li>Regression testing to alert devs about potential issues to check</li>
+						</ul>
+
+						<h3>Bad for:</h3>
+						<ul>
+							<li>Checking for overuse of ARIA</li>
+							<li>Misusing of semantic elements given context</li>
+							<li>UX for people with disabilities</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2 class="is-large">
+							Automated testing only catches about <span class="is-highlighted">40% of issues</span>
+							<div class="source">According to <a href="https://alphagov.github.io/accessibility-tool-audit/" target="_blank">research from GOV.UK</a></div>
+						</h2>
+					</section>
 
 
 				<!--
@@ -362,11 +427,6 @@
 				history: true,
 				fragmentsInURL: true,
 				navigationMode: "linear",
-				// width: "100%",
-				// height: "100%",
-				// margin: 0,
-				// minScale: 1,
-				// maxScale: 1,
 				dependencies: [
 					{ src: 'revealjs/plugin/markdown/marked.js' },
 					{ src: 'revealjs/plugin/markdown/markdown.js' },
