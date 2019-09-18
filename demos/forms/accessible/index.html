@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Forms - accessible version</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../../external/bulma/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <form action="#">
+      <div class="control">
+        <label class="label" for="name">What's your name?</label>
+        <input type="text" id="name" class="input" name="name" aria-describedby="name-errors">
+
+        <div id="name-errors" class="errors content">
+          <ul>
+            <li>Please provide a name</li>
+          </ul>
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>What's your favorite poultry?</legend>
+
+        <label>
+          <input type="checkbox" class="checkbox" name="poultry" value="brahman"> Brahma
+        </label>
+
+        <label>
+          <input type="checkbox" class="checkbox" name="poultry" value="cochin"> Cochin
+        </label>
+
+        <label>
+          <input type="checkbox" class="checkbox" name="poultry" value="leghorn"> Leghorn
+        </label>
+      </fieldset>
+
+      <div class="buttons">
+        <button class="button is-link">Submit</button>
+        <button type="button" class="button is-text">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 30px 0;
+}
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+form .control .errors {
+  display: none;
+}
+form .control .errors ul {
+  margin-top: 5px;
+}
+form .control.has-errors {
+  color: red;
+}
+form .control.has-errors label {
+  color: red;
+}
+form .control.has-errors input {
+  border-color: red;
+}
+form .control.has-errors .errors {
+  display: block;
+}
+form fieldset {
+  margin-top: 30px;
+}
+form fieldset legend {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+form fieldset label {
+  display: block;
+}
+form .buttons {
+  margin-top: 20px;
+}
