@@ -28,6 +28,8 @@
 	</head>
 
 	<body>
+		<h1 class="presentation-title">[Title of talk]</h1>
+
 		<div class="reveal">
 			<div class="slides">
 				<!--
@@ -36,7 +38,7 @@
 				==================
 				-->
 				<section>
-					<h1>[Title of talk]</h1>
+					<h2>[Title of talk]</h2>
 				</section>
 
 
@@ -46,10 +48,6 @@
 				========================
 				-->
 				<section>
-					<!--
-						Jason Webb
-						Developer Advocate at Accessible360
-					-->
 					<h2>Jason Webb</h2>
 					<p>Developer Advocate at Accessible360</p>
 				</section>
@@ -193,6 +191,11 @@
 						</div>
 					</section>
 
+				<!-- GIF of Kevin -->
+				<section>
+					<img src="media/kidding-me-kevin.gif" alt="Kevin from The Office saying Are You Kidding Me" width="500px">
+				</section>
+
 
 				<!--
 				==========================
@@ -251,26 +254,12 @@
 					</ul>
 				</section>
 
-				<!-- Everyone -->
-				<!-- <section>
-					<h2>For everyone</h2>
-
-					<ul>
-						<li>It’s the right thing to do.</li>
-						<li>Many accessibility enhancements improve user experience for everyone. Reference the curb cuts effect - when accessibility benefits everyone.</li>
-					</ul>
-				</section> -->
-
 
 				<!--
 				=======================================
 					7. How do I build accessible stuff?
 				=======================================
 				-->
-				<!-- GIF of Kevin -->
-				<section>
-					<img src="media/kidding-me-kevn.gif" alt="Kevin from The Office saying Are You Kidding Me" width="500px">
-				</section>
 
 					<!-- WCAG intro -->
 					<section data-background-image="media/chihuahua-rescue.gif">
@@ -317,9 +306,7 @@
 						<span class="is-background">Demo time!</span>
 					</h2>
 				</section>
-					
-				</section>
-				
+
 				<!-- <section>
 					<ul>
 						<li>What's that site?</li>
@@ -329,25 +316,27 @@
 				<section>
 					<h2>Demo: forms</h2>
 
-					<a href="https://codepen.io/jasonwebb/pen/VwZGwpQ?editors=1000" class="code-sample-link" target="_blank">
-						Inaccessible example
-					</a>
-
-					<a href="https://codepen.io/jasonwebb/pen/XWrPWGg?editors=1000" class="code-sample-link" target="_blank">
-						Accessible example
-					</a>
+					<ul class="block-list">
+						<li>
+							<a href="https://codepen.io/jasonwebb/pen/VwZGwpQ?editors=1000" class="code-sample-link" target="_blank">Inaccessible example</a>
+						</li>
+						<li>
+							<a href="https://codepen.io/jasonwebb/pen/XWrPWGg?editors=1000" class="code-sample-link" target="_blank">Accessible example</a>
+						</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>Demo: page structure</h2>
 
-					<a href="https://codepen.io/jasonwebb/pen/wvwEorp?editors=1000" class="code-sample-link" target="_blank">
-						Inaccessible example
-					</a>
-
-					<a href="https://codepen.io/jasonwebb/pen/ZEzMBRZ?editors=1000" class="code-sample-link" target="_blank">
-						Accessible example
-					</a>
+					<ul class="block-list">
+						<li>
+							<a href="https://codepen.io/jasonwebb/pen/wvwEorp?editors=1000" class="code-sample-link" target="_blank">Inaccessible example</a>
+						</li>
+						<li>
+							<a href="https://codepen.io/jasonwebb/pen/ZEzMBRZ?editors=1000" class="code-sample-link" target="_blank">Accessible example</a>
+						</li>
+					</ul>
 				</section>
 
 
@@ -363,25 +352,8 @@
 					<section>
 						<ul class="block-list is-compact">
 							<li><span class="icon fas fa-keyboard" aria-hidden="true"></span> Use only your keyboard to get a decent idea of operability, focus indicators, and focus management.</li>
-							<li><span class="icon fas fa-mobile-alt" aria-hidden="true"></span> Use mobile devices especially iPhones and iPads. They are very popular because of VoiceOver's Rotor.</li>
+							<li><span class="icon fas fa-mobile-alt" aria-hidden="true"></span> Use mobile devices. They are very popular because of TalkBack and VoiceOver's Rotor.</li>
 							<li><span class="icon fas fa-search-plus" aria-hidden="true"></span> Use extreme zoom and check for content overflows.</li>
-						</ul>
-					</section>
-
-					<section>
-						<h2>Automated testing</h2>
-
-						<h3>Good for:</h3>
-						<ul>
-							<li>Identifying very simple, clear syntax issues like invalid or bad markup use</li>
-							<li>Regression testing to alert devs about potential issues to check</li>
-						</ul>
-
-						<h3>Bad for:</h3>
-						<ul>
-							<li>Checking for overuse of ARIA</li>
-							<li>Misusing of semantic elements given context</li>
-							<li>UX for people with disabilities</li>
 						</ul>
 					</section>
 
@@ -392,20 +364,93 @@
 						</h2>
 					</section>
 
+						<section>
+							<h2 class="is-positive">
+								<span class="icon fas fa-check-circle" aria-hidden="true"></span>
+								Good for:
+							</h2>
+
+							<ul class="block-list">
+								<li>Identifying simple, clear syntax issues like invalid or bad markup use</li>
+								<li>Flagging potential issues for investigation by testers</li>
+								<li>Regression testing to alert devs about potential issues to check</li>
+							</ul>
+						</section>
+
+						<section>
+							<h2 class="is-negative">
+								<span class="icon fas fa-times-circle" aria-hidden="true"></span>
+								Bad for:
+							</h2>
+
+							<ul class="block-list">
+								<li>Checking for overuse of ARIA</li>
+								<li>Misusing of semantic elements given context</li>
+								<li>UX for people with disabilities</li>
+							</ul>
+						</section>
+
+				<section>
+					<h2 class="is-large">To courts, nothing beats live <span class="is-highlighted">human testing!</span></h2>
+				</section>
+
 
 				<!--
 				========================
 					10. How can you help
 				========================
 				-->
-				<!-- <section></section> -->
+				<section>
+					<h2 class="is-large">What can <br><span class="is-highlighted">you</span> do?</h2>
+				</section>
+
+				<section>
+					<ul class="block-list">
+						<li class="fragment">Advocate for accessibility as a core feature during requirements gathering and planning</li>
+						<li class="fragment">Set up monthly "keyboard only" or "screen reader only" days</li>
+						<li class="fragment">Collaborate with people with disabilities - user testing, lunch and learns, demo days</li>
+						<li class="fragment">Empower accessibility champions in multiple areas - start with informal SMEs, grow from there</li>
+						<li class="fragment">Reach out to companies like Accessible360!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2 class="is-large">Hire more people with disabilities!</h2>
+				</section>
 
 				<!--
 				=====================
 					11. Learning more
 				=====================
 				-->
-				<!-- <section></section> -->
+				<section>
+					<ul class="tiles">
+						<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/" target="_blank">WAI-ARIA Authoring Practices</a></li>
+						<li><a href="https://www.w3.org/WAI/" target="_blank">WAI-ARIA Working Group official site</a></li>
+						<li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">How to Meet WCAG (Quick Reference)</a></li>
+					</ul>
+				</section>
+
+					<section>
+						<ul class="tiles">
+							<li><a href="https://a11yproject.com/" target="_blank">The A11y Project</a></li>
+							<li><a href="https://inclusive-components.design/" target="_blank">Inclusive Components</a></li>
+							<li><a href="https://design-system.service.gov.uk/" target="_blank">GOV.UK Design System</a></li>
+							<li><a href="https://designsystem.digital.gov/" target="_blank">US Web Design System</a></li>
+							<li><a href="https://plainlanguage.gov/" target="_blank">Plain Language</a></li>
+							<li><a href="https://alistapart.com/blog/topic/accessibility/" target="_blank">A List Apart</a></li>
+							<li><a href="https://www.google.com/accessibility/" target="_blank">Google Accessibility</a></li>
+							<li><a href="https://empathyprompts.net/" target="_blank">Empathy Prompts</a></li>
+							<li><a href="https://accessibility.digital.gov/" target="_blank">Accessibility for Teams</a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h2 class="is-large is-centered is-lowercase">
+							<a href="#">
+								<span class="visually-hidden">Access this presentation online at</span> bit.ly/324</a>
+						</h2>
+					</section>
 
 				<!--
 				===========================================
@@ -423,10 +468,9 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				// controls: false,
+				controls: false,
 				history: true,
 				fragmentsInURL: true,
-				navigationMode: "linear",
 				dependencies: [
 					{ src: 'revealjs/plugin/markdown/marked.js' },
 					{ src: 'revealjs/plugin/markdown/markdown.js' },
