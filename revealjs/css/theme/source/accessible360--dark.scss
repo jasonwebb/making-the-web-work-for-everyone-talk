@@ -56,10 +56,31 @@ section.has-light-background {
 
 
 // Custom components ---------------------------
+h1.presentation-title {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
 
 .reveal {
 	.controls {
 		color: white;
+
+		button {
+			background-color: black;
+			padding: 10px;
+		}
 	}
 
 	.progress {
@@ -97,6 +118,10 @@ section.has-light-background {
 				font-weight: 600;
 			}
 
+			&.is-lowercase {
+				text-transform: none;
+			}
+
 			.is-background {
 				background-color: rgba(0,0,0,1);
 				box-decoration-break: clone;
@@ -129,6 +154,23 @@ section.has-light-background {
 				a {
 					color: #fff;
 					text-decoration: underline;
+				}
+			}
+
+			a {
+				color: white;
+				text-decoration: underline;
+			}
+
+			&.is-positive {
+				.icon {
+					color: green;
+				}
+			}
+
+			&.is-negative {
+				.icon {
+					color: red;
 				}
 			}
 		}
@@ -207,10 +249,11 @@ section.has-light-background {
 
 				li {
 					margin-bottom: 20px;
-					padding: 10px 60px 10px 30px;
+					padding: 15px 40px 15px 30px;
 					background-color: rgba(255,255,255,.1);
-					transition: all .3s ease-in-out !important;
-					border: 1px solid rgba(0,0,0,0);
+					transition: all .5s ease-in-out !important;
+					outline: 1px solid rgba(0,0,0,0);
+					font-size: 30px;
 
 					&:last-of-type {
 						margin-bottom: 0;
@@ -218,14 +261,15 @@ section.has-light-background {
 
 					&.fragment {
 						&.visible {
-							opacity: .5;
+							opacity: .8;
 						}
 
 						&.current-fragment {
-							padding-left: 40px;
+							padding-left: 60px;
 							opacity: 1;
-							background-color: rgba(255,255,255,.15);
-							border: 1px solid rgba(255,255,255,.4);
+							outline: 5px solid rgba(255,255,255,1);
+							color: black;
+							background-color: white;
 						}
 					}
 
@@ -239,9 +283,20 @@ section.has-light-background {
 						opacity: .6;
 					}
 
+					a {
+						display: block;
+						padding: 10px 0;
+						color: white;
+						text-align: center;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+
 					p {
 						margin: 0;
-						font-size: 50px;
+						font-size: 40px;
 
 						&.title {
 							font-weight: bold;
@@ -252,35 +307,40 @@ section.has-light-background {
 							font-size: 30px;
 							opacity: .6;
 							margin: 10px 0;
+							font-weight: normal;
 						}
 					}
 				}
 			}
-		}
 
-		.large-code-sample {
-			// height: 100%;
-			display: none;
+			&.tiles {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
+				margin: 0;
+				padding: 0;
 
-			.cp_embed_wrapper {
-				height: 100%;
-			}
-		}
+				li {
+					flex: 0 1 calc(33% - 10px);
+					box-sizing: border-box;
+					margin: 5px;
 
-		.code-sample-link {
-			background-color: rgba(255,255,255,.1);
-			border: 1px solid rgba(0,0,0,0);
-			padding: 20px;
-			margin-top: 40px;
-			color: white;
-			display: block;
-			width: 100%;
+					a {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						height: 200px;
+						padding: 0 30px;
+						background-color: rgba(255,255,255,.1);
+						color: white;
+						font-size: 32px;
 
-			&:hover {
-				opacity: 1;
-				background-color: rgba(255,255,255,.15);
-				border: 1px solid rgba(255,255,255,.4);	
-				text-decoration: underline;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
 			}
 		}
 	}

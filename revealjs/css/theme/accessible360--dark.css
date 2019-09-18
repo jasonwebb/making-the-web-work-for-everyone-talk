@@ -274,8 +274,26 @@ body {
   .backgrounds {
     background-color: black; } }
 
+h1.presentation-title {
+  position: absolute;
+  left: -9999px;
+  top: 0; }
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
 .reveal .controls {
   color: white; }
+  .reveal .controls button {
+    background-color: black;
+    padding: 10px; }
 
 .reveal .progress {
   color: white; }
@@ -300,6 +318,8 @@ body {
     line-height: 75px;
     text-transform: unset;
     font-weight: 600; }
+  .reveal section h2.is-lowercase {
+    text-transform: none; }
   .reveal section h2 .is-background {
     background-color: black;
     box-decoration-break: clone;
@@ -325,6 +345,13 @@ body {
     .reveal section h2 .source a {
       color: #fff;
       text-decoration: underline; }
+  .reveal section h2 a {
+    color: white;
+    text-decoration: underline; }
+  .reveal section h2.is-positive .icon {
+    color: green; }
+  .reveal section h2.is-negative .icon {
+    color: red; }
 
 .reveal section p.is-large {
   font-size: 80px;
@@ -372,19 +399,21 @@ body {
     font-size: 30px; }
   .reveal section ul.block-list li {
     margin-bottom: 20px;
-    padding: 10px 60px 10px 30px;
+    padding: 15px 40px 15px 30px;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: all .3s ease-in-out !important;
-    border: 1px solid rgba(0, 0, 0, 0); }
+    transition: all .5s ease-in-out !important;
+    outline: 1px solid rgba(0, 0, 0, 0);
+    font-size: 30px; }
     .reveal section ul.block-list li:last-of-type {
       margin-bottom: 0; }
     .reveal section ul.block-list li.fragment.visible {
-      opacity: .5; }
+      opacity: .8; }
     .reveal section ul.block-list li.fragment.current-fragment {
-      padding-left: 40px;
+      padding-left: 60px;
       opacity: 1;
-      background-color: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.4); }
+      outline: 5px solid white;
+      color: black;
+      background-color: white; }
     .reveal section ul.block-list li .icon {
       float: left;
       font-size: 42px;
@@ -393,32 +422,44 @@ body {
       width: 50px;
       text-align: center;
       opacity: .6; }
+    .reveal section ul.block-list li a {
+      display: block;
+      padding: 10px 0;
+      color: white;
+      text-align: center; }
+      .reveal section ul.block-list li a:hover {
+        text-decoration: underline; }
     .reveal section ul.block-list li p {
       margin: 0;
-      font-size: 50px; }
+      font-size: 40px; }
       .reveal section ul.block-list li p.title {
         font-weight: bold;
         line-height: 50px; }
       .reveal section ul.block-list li p.subtitle {
         font-size: 30px;
         opacity: .6;
-        margin: 10px 0; }
+        margin: 10px 0;
+        font-weight: normal; }
 
-.reveal section .large-code-sample {
-  display: none; }
-  .reveal section .large-code-sample .cp_embed_wrapper {
-    height: 100%; }
-
-.reveal section .code-sample-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0);
-  padding: 20px;
-  margin-top: 40px;
-  color: white;
-  display: block;
-  width: 100%; }
-  .reveal section .code-sample-link:hover {
-    opacity: 1;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    text-decoration: underline; }
+.reveal section ul.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .reveal section ul.tiles li {
+    flex: 0 1 calc(33% - 10px);
+    box-sizing: border-box;
+    margin: 5px; }
+    .reveal section ul.tiles li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 200px;
+      padding: 0 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 32px; }
+      .reveal section ul.tiles li a:hover {
+        text-decoration: underline; }
