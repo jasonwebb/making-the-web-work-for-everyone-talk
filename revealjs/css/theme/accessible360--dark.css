@@ -327,6 +327,8 @@ h1.presentation-title {
     display: inline;
     line-height: 145px;
     padding: 0 20px; }
+  .reveal section h2 > .icon:first-child {
+    margin-right: 20px; }
   .reveal section h2 + .block-list {
     margin-top: 30px !important; }
   .reveal section h2 .badge {
