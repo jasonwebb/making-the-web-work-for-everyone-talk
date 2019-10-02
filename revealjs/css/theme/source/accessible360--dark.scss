@@ -16,7 +16,6 @@ $brand-color--blue: #007694;
 $brand-color--darkblue: #1a6c80;
 
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 @import url(../../lib/font/fontawesome/css/fontawesome.min.css);
 @import url(../../lib/font/fontawesome/css/solid.min.css);
 
@@ -33,7 +32,7 @@ $headingFont: Arial, Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
-$headingFontWeight: 600;
+$headingFontWeight: 400;
 $linkColor: #42affa;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
@@ -131,6 +130,10 @@ h1.presentation-title {
 				padding: 0 20px;
 			}
 
+			&.is-right-aligned {
+				text-align: right;
+			}
+
 			& > .icon:first-child {
 				margin-right: 20px;
 			}
@@ -191,15 +194,44 @@ h1.presentation-title {
 		img {
 			border: 0;
 			box-shadow: none;
+			margin: 0;
 		}
 
 		.is-highlighted {
 			color: $brand-color--lightblue !important;
 		}
 
+		.columns {
+			display: flex;
+
+			.column {
+				flex: 0 0 auto;
+			}
+		}
+
 		// Media object - icon on left, title and content on right
 		.media-object {
 			display: flex;
+			width: auto;
+			padding: 50px;
+			box-shadow: 0 0 0 3px orange;
+			border-radius: 10px;
+
+			&.has-no-border {
+				box-shadow: none;
+			}
+
+			&.is-compact {
+				.icon {
+					width: 200px;
+				}
+
+				.content {
+					h2 {
+						font-size: 40px;
+					}
+				}
+			}
 
 			.icon {
 				flex: 0 auto;
@@ -207,6 +239,11 @@ h1.presentation-title {
 				margin-right: 40px;
 				text-align: center;
 				color: $brand-color--lightblue;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
 
 				.fas {
 					font-size: 140px;
@@ -220,12 +257,13 @@ h1.presentation-title {
 
 				h2 {
 					text-transform: none;
+					font-weight: 700;
 				}
 
 				p,
 				ul {
 					line-height: 45px;
-					margin-top: 30px;
+					margin-top: 10px;
 					opacity: .6;
 				}
 			}
@@ -251,12 +289,18 @@ h1.presentation-title {
 					}
 				}
 
+				&.is-large {
+					li {
+						font-size: 40px;
+					}
+				}
+
 				li {
 					margin-bottom: 20px;
 					padding: 15px 40px 15px 30px;
 					background-color: rgba(255,255,255,.1);
 					transition: all .5s ease-in-out !important;
-					outline: 1px solid rgba(0,0,0,0);
+					// border-radius: 10px;
 					font-size: 30px;
 
 					&:last-of-type {
@@ -271,9 +315,7 @@ h1.presentation-title {
 						&.current-fragment {
 							padding-left: 60px;
 							opacity: 1;
-							outline: 5px solid rgba(255,255,255,1);
-							color: black;
-							background-color: white;
+							box-shadow: 0 0 0 3px orange;
 						}
 					}
 
@@ -316,33 +358,36 @@ h1.presentation-title {
 					}
 				}
 			}
+		}
 
-			&.tiles {
-				display: flex;
-				flex-wrap: wrap;
-				list-style: none;
-				margin: 0;
-				padding: 0;
+		dl {
+			&.link-list {
+				font-size: 36px;
 
-				li {
-					flex: 0 1 calc(33% - 10px);
-					box-sizing: border-box;
-					margin: 5px;
+				&.columns {
+					display: flex;
+
+					.column {
+						flex: 0 1 40%;
+						font-size: 28px;
+						padding: 10px;
+
+						&:last-of-type {
+							text-align: right;
+						}
+					}
+				}
+
+				dt {
+					flex: 1 0 100%;
+				}
+
+				dd {
+					flex: 1 0 100%;
+					margin: 0 0 60px 0;
 
 					a {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						text-align: center;
-						height: 200px;
-						padding: 0 30px;
-						background-color: rgba(255,255,255,.1);
-						color: white;
-						font-size: 32px;
-
-						&:hover {
-							text-decoration: underline;
-						}
+						text-decoration: underline;
 					}
 				}
 			}

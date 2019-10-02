@@ -3,7 +3,6 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 @import url(../../lib/font/fontawesome/css/fontawesome.min.css);
 @import url(../../lib/font/fontawesome/css/solid.min.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
@@ -49,7 +48,7 @@ body {
   margin: 0 0 20px 0;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -327,6 +326,8 @@ h1.presentation-title {
     display: inline;
     line-height: 145px;
     padding: 0 20px; }
+  .reveal section h2.is-right-aligned {
+    text-align: right; }
   .reveal section h2 > .icon:first-child {
     margin-right: 20px; }
   .reveal section h2 + .block-list {
@@ -363,19 +364,38 @@ h1.presentation-title {
 
 .reveal section img {
   border: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  margin: 0; }
 
 .reveal section .is-highlighted {
   color: #47b5cf !important; }
 
-.reveal section .media-object {
+.reveal section .columns {
   display: flex; }
+  .reveal section .columns .column {
+    flex: 0 0 auto; }
+
+.reveal section .media-object {
+  display: flex;
+  width: auto;
+  padding: 50px;
+  box-shadow: 0 0 0 3px orange;
+  border-radius: 10px; }
+  .reveal section .media-object.has-no-border {
+    box-shadow: none; }
+  .reveal section .media-object.is-compact .icon {
+    width: 200px; }
+  .reveal section .media-object.is-compact .content h2 {
+    font-size: 40px; }
   .reveal section .media-object .icon {
     flex: 0 auto;
     margin-top: -10px;
     margin-right: 40px;
     text-align: center;
     color: #47b5cf; }
+    .reveal section .media-object .icon img {
+      width: 100%;
+      height: auto; }
     .reveal section .media-object .icon .fas {
       font-size: 140px;
       margin-bottom: 30px; }
@@ -383,11 +403,12 @@ h1.presentation-title {
     flex: 1 auto;
     text-align: left; }
     .reveal section .media-object .content h2 {
-      text-transform: none; }
+      text-transform: none;
+      font-weight: 700; }
     .reveal section .media-object .content p,
     .reveal section .media-object .content ul {
       line-height: 45px;
-      margin-top: 30px;
+      margin-top: 10px;
       opacity: .6; }
 
 .reveal section ul.block-list {
@@ -399,12 +420,13 @@ h1.presentation-title {
     padding: 20px 60px 20px 30px; }
   .reveal section ul.block-list.is-compact li {
     font-size: 30px; }
+  .reveal section ul.block-list.is-large li {
+    font-size: 40px; }
   .reveal section ul.block-list li {
     margin-bottom: 20px;
     padding: 15px 40px 15px 30px;
     background-color: rgba(255, 255, 255, 0.1);
     transition: all .5s ease-in-out !important;
-    outline: 1px solid rgba(0, 0, 0, 0);
     font-size: 30px; }
     .reveal section ul.block-list li:last-of-type {
       margin-bottom: 0; }
@@ -413,9 +435,7 @@ h1.presentation-title {
     .reveal section ul.block-list li.fragment.current-fragment {
       padding-left: 60px;
       opacity: 1;
-      outline: 5px solid white;
-      color: black;
-      background-color: white; }
+      box-shadow: 0 0 0 3px orange; }
     .reveal section ul.block-list li .icon {
       float: left;
       font-size: 42px;
@@ -443,25 +463,20 @@ h1.presentation-title {
         margin: 10px 0;
         font-weight: normal; }
 
-.reveal section ul.tiles {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  .reveal section ul.tiles li {
-    flex: 0 1 calc(33% - 10px);
-    box-sizing: border-box;
-    margin: 5px; }
-    .reveal section ul.tiles li a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 200px;
-      padding: 0 30px;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-      font-size: 32px; }
-      .reveal section ul.tiles li a:hover {
-        text-decoration: underline; }
+.reveal section dl.link-list {
+  font-size: 36px; }
+  .reveal section dl.link-list.columns {
+    display: flex; }
+    .reveal section dl.link-list.columns .column {
+      flex: 0 1 40%;
+      font-size: 28px;
+      padding: 10px; }
+      .reveal section dl.link-list.columns .column:last-of-type {
+        text-align: right; }
+  .reveal section dl.link-list dt {
+    flex: 1 0 100%; }
+  .reveal section dl.link-list dd {
+    flex: 1 0 100%;
+    margin: 0 0 60px 0; }
+    .reveal section dl.link-list dd a {
+      text-decoration: underline; }
