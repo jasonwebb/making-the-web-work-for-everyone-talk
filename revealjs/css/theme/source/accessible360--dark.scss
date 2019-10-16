@@ -18,6 +18,7 @@ $brand-color--darkblue: #1a6c80;
 // Include theme-specific fonts
 @import url(../../lib/font/fontawesome/css/fontawesome.min.css);
 @import url(../../lib/font/fontawesome/css/solid.min.css);
+@import url(../../lib/font/fontawesome/css/brands.min.css);
 
 
 // Override theme settings (see ../template/settings.scss)
@@ -330,10 +331,13 @@ h1.presentation-title {
 					}
 
 					a {
-						display: block;
 						padding: 10px 0;
 						color: white;
-						text-align: center;
+
+						&.is-full-width {
+							display: block;
+							text-align: center;
+						}
 
 						&:hover {
 							text-decoration: underline;

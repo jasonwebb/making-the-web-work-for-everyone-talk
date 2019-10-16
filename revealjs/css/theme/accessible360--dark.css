@@ -5,6 +5,7 @@
  */
 @import url(../../lib/font/fontawesome/css/fontawesome.min.css);
 @import url(../../lib/font/fontawesome/css/solid.min.css);
+@import url(../../lib/font/fontawesome/css/brands.min.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -445,10 +446,11 @@ h1.presentation-title {
       text-align: center;
       opacity: .6; }
     .reveal section ul.block-list li a {
-      display: block;
       padding: 10px 0;
-      color: white;
-      text-align: center; }
+      color: white; }
+      .reveal section ul.block-list li a.is-full-width {
+        display: block;
+        text-align: center; }
       .reveal section ul.block-list li a:hover {
         text-decoration: underline; }
     .reveal section ul.block-list li p {
