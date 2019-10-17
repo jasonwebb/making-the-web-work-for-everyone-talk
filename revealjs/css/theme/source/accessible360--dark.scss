@@ -183,6 +183,23 @@ h1.presentation-title {
 			}
 		}
 
+		h3 {
+			text-transform: none;
+			font-weight: bold;
+			font-size: 80px;
+			line-height: 70px;
+			text-align: left;
+		}
+
+		.background-icon {
+			position: absolute;
+			top: 0;
+			font-size: 550px;
+			opacity: .3;
+			z-index: 0;
+			mix-blend-mode: overlay;
+		}
+
 		p {
 			&.is-large {
 				font-size: 80px;
@@ -215,8 +232,8 @@ h1.presentation-title {
 			display: flex;
 			width: auto;
 			padding: 50px;
-			box-shadow: 0 0 0 3px orange;
-			border-radius: 10px;
+			box-shadow: 0 0 200px 20px rgba(255,255,255,.25);
+			border: 5px solid orange;
 
 			&.has-no-border {
 				box-shadow: none;
@@ -317,6 +334,7 @@ h1.presentation-title {
 							padding-left: 60px;
 							opacity: 1;
 							box-shadow: 0 0 0 3px orange;
+							background-color: rgba(255,255,255,.15);
 						}
 					}
 
