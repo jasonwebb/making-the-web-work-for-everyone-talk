@@ -94,6 +94,7 @@ h1.presentation-title {
 
 		h2 {
 			margin: 0;
+			z-index: 1;
 
 			&.is-centered {
 				text-align: center !important;
@@ -194,10 +195,10 @@ h1.presentation-title {
 		.background-icon {
 			position: absolute;
 			top: 0;
-			font-size: 550px;
-			opacity: .3;
+			right: 100px;
+			opacity: .2;
+			font-size: 450px;
 			z-index: 0;
-			mix-blend-mode: overlay;
 		}
 
 		p {

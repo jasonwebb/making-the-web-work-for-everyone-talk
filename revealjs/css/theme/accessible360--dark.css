@@ -302,7 +302,8 @@ h1.presentation-title {
   margin: 0; }
 
 .reveal section h2 {
-  margin: 0; }
+  margin: 0;
+  z-index: 1; }
   .reveal section h2.is-centered {
     text-align: center !important; }
   .reveal section h2.is-large {
@@ -357,6 +358,21 @@ h1.presentation-title {
   .reveal section h2.is-negative .icon {
     color: red; }
 
+.reveal section h3 {
+  text-transform: none;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 70px;
+  text-align: left; }
+
+.reveal section .background-icon {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  opacity: .2;
+  font-size: 450px;
+  z-index: 0; }
+
 .reveal section p.is-large {
   font-size: 80px;
   line-height: 80px;
@@ -380,8 +396,8 @@ h1.presentation-title {
   display: flex;
   width: auto;
   padding: 50px;
-  box-shadow: 0 0 0 3px orange;
-  border-radius: 10px; }
+  box-shadow: 0 0 200px 20px rgba(255, 255, 255, 0.25);
+  border: 5px solid orange; }
   .reveal section .media-object.has-no-border {
     box-shadow: none; }
   .reveal section .media-object.is-compact .icon {
@@ -436,7 +452,8 @@ h1.presentation-title {
     .reveal section ul.block-list li.fragment.current-fragment {
       padding-left: 60px;
       opacity: 1;
-      box-shadow: 0 0 0 3px orange; }
+      box-shadow: 0 0 0 3px orange;
+      background-color: rgba(255, 255, 255, 0.15); }
     .reveal section ul.block-list li .icon {
       float: left;
       font-size: 42px;
