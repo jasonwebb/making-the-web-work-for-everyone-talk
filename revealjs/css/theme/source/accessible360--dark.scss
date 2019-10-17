@@ -20,6 +20,21 @@ $brand-color--darkblue: #1a6c80;
 @import url(../../lib/font/fontawesome/css/solid.min.css);
 @import url(../../lib/font/fontawesome/css/brands.min.css);
 
+// Typography
+@font-face {
+	font-family: 'Lexend Deca';
+	src: url('../../lib/font/Lexend_Deca/LexendDeca-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'Lexend Exa';
+	src: url('../../lib/font/Lexend_Exa/LexendExa-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'Lexend Giga';
+	src: url('../../lib/font/Lexend_Giga/LexendGiga-Regular.ttf')  format('truetype');
+}
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: rgb(0,0,0);
@@ -28,8 +43,8 @@ $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 42px;
-$mainFont: Arial, Helvetica, sans-serif;
-$headingFont: Arial, Helvetica, sans-serif;
+$mainFont: 'Lexend Deca';
+$headingFont: 'Lexend Exa';
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -95,6 +110,7 @@ h1.presentation-title {
 		h2 {
 			margin: 0;
 			z-index: 1;
+			font-family: Arial, Helvetica, sans-serif;
 
 			&.is-centered {
 				text-align: center !important;
@@ -190,6 +206,7 @@ h1.presentation-title {
 			font-size: 80px;
 			line-height: 70px;
 			text-align: left;
+			font-family: Arial, Helvetica, sans-serif;
 		}
 
 		.background-icon {

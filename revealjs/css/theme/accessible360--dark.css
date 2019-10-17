@@ -6,6 +6,18 @@
 @import url(../../lib/font/fontawesome/css/fontawesome.min.css);
 @import url(../../lib/font/fontawesome/css/solid.min.css);
 @import url(../../lib/font/fontawesome/css/brands.min.css);
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url("../../lib/font/Lexend_Deca/LexendDeca-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lexend Exa';
+  src: url("../../lib/font/Lexend_Exa/LexendExa-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lexend Giga';
+  src: url("../../lib/font/Lexend_Giga/LexendGiga-Regular.ttf") format("truetype"); }
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -17,7 +29,7 @@ body {
   background-color: black; }
 
 .reveal {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lexend Deca";
   font-size: 42px;
   font-weight: normal;
   color: #fff; }
@@ -48,7 +60,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lexend Exa";
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: normal;
@@ -303,7 +315,8 @@ h1.presentation-title {
 
 .reveal section h2 {
   margin: 0;
-  z-index: 1; }
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif; }
   .reveal section h2.is-centered {
     text-align: center !important; }
   .reveal section h2.is-large {
@@ -363,7 +376,8 @@ h1.presentation-title {
   font-weight: bold;
   font-size: 80px;
   line-height: 70px;
-  text-align: left; }
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif; }
 
 .reveal section .background-icon {
   position: absolute;
