@@ -301,6 +301,12 @@ h1.presentation-title {
   position: absolute;
   width: 1px; }
 
+.is-left-aligned {
+  text-align: left; }
+
+a:focus {
+  box-shadow: 0 0 0 3px #42affa; }
+
 .reveal .controls {
   color: white; }
   .reveal .controls button {
@@ -309,9 +315,6 @@ h1.presentation-title {
 
 .reveal .progress {
   color: white; }
-
-.reveal section h1 {
-  margin: 0; }
 
 .reveal section h2 {
   margin: 0;
@@ -359,12 +362,13 @@ h1.presentation-title {
     font-size: 40px;
     text-transform: none;
     font-weight: 300;
-    opacity: .6; }
+    color: rgba(255, 255, 255, 0.6); }
     .reveal section h2 .source a {
-      color: #fff;
-      text-decoration: underline; }
+      text-decoration: underline;
+      color: rgba(255, 255, 255, 0.6); }
+      .reveal section h2 .source a:hover, .reveal section h2 .source a:focus {
+        color: white; }
   .reveal section h2 a {
-    color: white;
     text-decoration: underline; }
   .reveal section h2.is-positive .icon {
     color: green; }
@@ -451,6 +455,8 @@ h1.presentation-title {
     padding: 20px 60px 20px 30px; }
   .reveal section ul.block-list.is-compact li {
     font-size: 30px; }
+  .reveal section ul.block-list.is-medium li {
+    font-size: 35px; }
   .reveal section ul.block-list.is-large li {
     font-size: 40px; }
   .reveal section ul.block-list li {
@@ -511,5 +517,7 @@ h1.presentation-title {
   .reveal section dl.link-list dd {
     flex: 1 0 100%;
     margin: 0 0 60px 0; }
+    .reveal section dl.link-list dd:last-of-type {
+      margin-bottom: 0; }
     .reveal section dl.link-list dd a {
       text-decoration: underline; }
