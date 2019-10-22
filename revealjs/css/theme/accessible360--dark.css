@@ -391,6 +391,9 @@ a:focus {
   font-size: 450px;
   z-index: 0; }
 
+.reveal section p.is-small {
+  font-size: 30px; }
+
 .reveal section p.is-large {
   font-size: 80px;
   line-height: 80px;
@@ -503,20 +506,23 @@ a:focus {
         font-weight: normal; }
 
 .reveal section dl.link-list {
-  font-size: 36px; }
+  margin: 0 auto;
+  font-size: 36px;
+  width: 90%; }
   .reveal section dl.link-list.columns {
     display: flex; }
     .reveal section dl.link-list.columns .column {
-      flex: 0 1 40%;
+      flex: 0 0 50%;
       font-size: 28px;
-      padding: 10px; }
+      box-sizing: border-box; }
       .reveal section dl.link-list.columns .column:last-of-type {
         text-align: right; }
   .reveal section dl.link-list dt {
     flex: 1 0 100%; }
   .reveal section dl.link-list dd {
     flex: 1 0 100%;
-    margin: 0 0 60px 0; }
+    margin: 0 0 60px 0;
+    word-break: break-all; }
     .reveal section dl.link-list dd:last-of-type {
       margin-bottom: 0; }
     .reveal section dl.link-list dd a {
