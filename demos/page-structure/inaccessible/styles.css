@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+.sidebar {}
+
+.sidebar .links a {
+  display: block;
+  padding: 5px 0;
+}
+
+.sidebar .links a:first-of-type {
+  padding-top: 0;
+}
+
+.footer {
+  padding: 20px;
+  margin-top: 40px;
+  background-color: rgba(0,0,0,.1);
+}

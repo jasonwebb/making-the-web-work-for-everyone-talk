@@ -10,9 +10,20 @@ window.addEventListener('DOMContentLoaded', function(e) {
 });
 
 function showErrors() {
+  var nameInput = document.getElementById('name');
+  var isInvalid = nameInput.getAttribute('aria-invalid');
+
+  if(isInvalid === null) {
+    nameInput.setAttribute('aria-invalid', true);
+  } else {
+    nameInput.removeAttribute('aria-invalid');
+  }
+
   var controls = document.querySelectorAll('.control');
 
   controls.forEach(function(control) {
     control.classList.toggle('has-errors');
   });
+
+  document.getElementById('name').focus();
 }

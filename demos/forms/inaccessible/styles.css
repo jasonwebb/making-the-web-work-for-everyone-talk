@@ -1,32 +1,53 @@
 * {
   box-sizing: border-box;
 }
+
+*:focus {
+  outline: none
+}
+
 body {
   padding: 30px 0;
 }
+
 form {
   width: 300px;
   margin: 0 auto;
 }
-form .control {
+
+
+.control {
   margin-bottom: 30px;
 }
-form .control .errors {
-  display: none;
-  color: red;
-}
-form .control .errors ul {
-  margin-top: 5px;
-}
-form .control.has-errors .label {
-  color: red;
-}
-form .control.has-errors .input {
-  border-color: red;
-}
-form .control.has-errors .errors {
-  display: block;
-}
-form .buttons {
+
+  .control .input:focus {
+    border-color: #dbdbdb;
+    box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+  }
+
+  .control .errors {
+    display: none;
+    color: red;
+  }
+
+    .control .errors ul {
+      margin-top: 5px;
+    }
+
+      .controls .errors.has-errors {}
+
+        .controls .errors.has-errors .label {
+          color: red;
+        }
+
+        .controls .errors.has-errors .input {
+          border-color: red;
+        }
+
+        .control .errors.has-errors .errors {
+          display: block;
+        }
+
+.buttons {
   margin-top: 20px;
 }

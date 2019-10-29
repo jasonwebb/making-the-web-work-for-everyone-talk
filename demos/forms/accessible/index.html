@@ -12,41 +12,39 @@
 </head>
 
 <body>
-  <div class="container">
-    <form action="#">
-      <div class="control">
-        <label class="label" for="name">What's your name?</label>
-        <input type="text" id="name" class="input" name="name" aria-describedby="name-errors">
+  <form>
+    <div class="control">
+      <label class="label" for="name">What's your name?</label>
+      <input type="text" id="name" class="input" name="name" aria-describedby="name-errors" aria-required="true" autocomplete="name">
 
-        <div id="name-errors" class="errors content">
-          <ul>
-            <li>Please provide a name</li>
-          </ul>
-        </div>
+      <div id="name-errors" class="errors content">
+        <ul>
+          <li>Please provide a name</li>
+        </ul>
       </div>
+    </div>
 
-      <fieldset>
-        <legend>What's your favorite poultry?</legend>
+    <fieldset>
+      <legend>What's your favorite poultry?</legend>
 
-        <label>
-          <input type="checkbox" class="checkbox" name="poultry" value="brahman"> Brahma
-        </label>
+      <label>
+        <input type="checkbox" class="checkbox" name="poultry" value="brahman"> Brahma
+      </label>
 
-        <label>
-          <input type="checkbox" class="checkbox" name="poultry" value="cochin"> Cochin
-        </label>
+      <label>
+        <input type="checkbox" class="checkbox" name="poultry" value="cochin"> Cochin
+      </label>
 
-        <label>
-          <input type="checkbox" class="checkbox" name="poultry" value="leghorn"> Leghorn
-        </label>
-      </fieldset>
+      <label>
+        <input type="checkbox" class="checkbox" name="poultry" value="leghorn"> Leghorn
+      </label>
+    </fieldset>
 
-      <div class="buttons">
-        <button class="button is-link">Submit</button>
-        <button type="button" class="button is-text">Cancel</button>
-      </div>
-    </form>
-  </div>
+    <div class="buttons">
+      <button type="submit" class="button is-link">Submit</button>
+      <button type="button" class="button is-text">Cancel</button>
+    </div>
+  </form>
 
   <script src="scripts.js"></script>
 </body>
