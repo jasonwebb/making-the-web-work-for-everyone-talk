@@ -304,6 +304,9 @@ h1.presentation-title {
 .is-left-aligned {
   text-align: left; }
 
+.is-underlined {
+  text-decoration: underline !important; }
+
 a:focus {
   box-shadow: 0 0 0 3px #42affa; }
 
@@ -421,7 +424,6 @@ a:focus {
   display: flex;
   width: auto;
   padding: 50px;
-  box-shadow: 0 0 200px 20px rgba(255, 255, 255, 0.25);
   border: 5px solid orange; }
   .reveal section .media-object.has-no-border {
     box-shadow: none; }
@@ -485,10 +487,10 @@ a:focus {
       float: left;
       font-size: 42px;
       margin-right: 30px;
+      margin-bottom: 15px;
       padding: 5px 0;
       width: 50px;
-      text-align: center;
-      opacity: .6; }
+      text-align: center; }
     .reveal section ul.block-list li a {
       padding: 10px 0;
       color: white; }
