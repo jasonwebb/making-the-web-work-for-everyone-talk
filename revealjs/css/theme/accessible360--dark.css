@@ -330,6 +330,10 @@ a:focus {
     .reveal section h2.is-large .icon {
       margin-top: 40px;
       font-size: 200px; }
+  .reveal section h2.is-medium {
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 700; }
   .reveal section h2.is-small {
     font-size: 65px;
     line-height: 75px;

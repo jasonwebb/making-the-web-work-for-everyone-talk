@@ -134,6 +134,12 @@ a {
 				}
 			}
 
+			&.is-medium {
+				font-size: 80px;
+				line-height: 80px;
+				font-weight: 700;
+			}
+
 			&.is-small {
 				font-size: 65px;
 				line-height: 75px;
