@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="revealjs/css/reset.css">
 		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/lib/css/font-awesome-animation.min.css">
 		<link rel="stylesheet" href="revealjs/css/theme/accessible360--dark.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -51,16 +52,17 @@
 						<b>
 							Hey! I'm
 							<span class="is-highlighted">Jason Webb</span>
+							<span class="fas fa-ghost faa-ring animated fragment" aria-label="Animated ghost icon"></span>
 						</b>
 					</h2>
 
 					<p style="opacity: .6; margin: 0">Developer Advocate @ Accessible360</p>
 
 					<p class="is-small" style="opacity: .6; margin-top: 40px;">
-						<span class="fab fa-twitter" aria-label="Twitter handle: "></span>
+						<span class="fab fa-twitter" aria-label="Twitter handle: "></span> &nbsp;
 						jasonwebb<br>
 
-						<span class="fa fa-envelope" aria-label="Email: "></span>
+						<span class="fa fa-envelope" aria-label="Email: "></span> &nbsp;
 						jwebb@accessible360.com
 					</p>
 				</section>
@@ -140,7 +142,7 @@
 							<div class="content">
 								<h2>Visual</h2>
 								<ul>
-									<li>Partial vision loss ("low vision")</li>
+									<li>Partial loss ("low vision")</li>
 									<li>Complete loss ("blindness")</li>
 									<li>Reduced or increased sensitivity to certain colors ("color blindness")</li>
 								</ul>
@@ -217,13 +219,13 @@
 							</li>
 
 							<li class="fragment">
-								<p class="title">Americans with Disabilities Act (ADA)</p>
-								<p class="subtitle">Federal civil rights law prohibiting discrimation based on disability. Web + mobile as "public accommodations"</p>
+								<p class="title">Section 508 and 504</p>
+								<p class="subtitle">Government agencies and orgs receiving federal aid (public schools, health care, etc)</p>
 							</li>
 
 							<li class="fragment">
-								<p class="title">Section 508 and 504</p>
-								<p class="subtitle">Government agencies and orgs receiving federal aid (public schools, health care, etc)</p>
+								<p class="title">Americans with Disabilities Act (ADA)</p>
+								<p class="subtitle">Federal civil rights law prohibiting discrimation based on disability. Web + mobile as "public accommodations"</p>
 							</li>
 						</ul>
 					</section>
@@ -257,7 +259,7 @@
 					</h2>
 
 					<ul class="block-list is-compact">
-						<li class="fragment">Because it relies heavily on using native tech as intended, it naturally encourages cleaner code that is easier to understand and maintain.</li>
+						<li class="fragment">Because it relies heavily on using native tech as intended, it naturally encourages better code quality.</li>
 						<li class="fragment">Sought after skill in modern market, and is increasing in value right now</li>
 						<li class="fragment">Personal and professional growth. Learning new things is important.</li>
 					</ul>
@@ -307,7 +309,9 @@
 
 					<section>
 						<h2 class="is-small">Use <span class="is-highlighted">ARIA</span>, but only when absolutely necessary</h2>
-						<small class="fragment" style="margin-top: 30px; opacity: .7">(don't over-do it!)</small>
+						<small class="fragment" style="margin-top: 50px;">
+							( <a href="https://webaim.org/projects/million/update#aria" target="_blank"><u>don't over-do it!</u></a> )
+						</small>
 					</section>
 
 
@@ -403,6 +407,11 @@
 									<span class="icon fas fa-search-plus is-highlighted" aria-hidden="true"></span>
 									Use extreme zoom and check for content overflows and touch operability.
 								</li>
+
+								<li class="fragment">
+									<span class="icon fas fa-clipboard-list is-highlighted" aria-hidden="true"></span> 
+									Use a checklist like the <a href="http://accessibility.voxmedia.com/" class="is-highlighted" target="_blank"><u>Vox Product Accessibility Guidelines</u></a>
+								</li>
 							</ul>
 						</section>
 
@@ -434,7 +443,7 @@
 
 						<li class="fragment">
 							<span class="icon fas fa-newspaper is-highlighted" aria-hidden="true"></span>
-							Make it impossible for content editing tools to produce bad content
+							Make it impossible for content creation tools to produce bad markup
 						</li>
 
 						<li class="fragment">
@@ -543,7 +552,7 @@
 				===========================================
 				-->
 				<section>
-					<h2>Get in touch!</h2>
+					<h2 class="is-large is-lowercase is-centered" style="margin-bottom: 30px">kthxbai!</h2>
 
 					<ul class="block-list">
 						<li>
