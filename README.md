@@ -12,6 +12,15 @@
 6. [How can *you* make things better?](https://jasonwebb.github.io/making-the-web-work-for-everyone-talk/#/32)
 7. [Learning more](https://jasonwebb.github.io/making-the-web-work-for-everyone-talk/#/36)
 
+### Code samples
+
+1. Page structure - how landmark tags affect screen reader usability
+   * [Inaccessible version](https://codepen.io/jasonwebb/pen/wvwEorp/left?editors=1000)
+   * [Accessible version](https://codepen.io/jasonwebb/pen/ZEzMBRZ/left?editors=1000)
+2. Forms - using `<label>`s, grouping controls using `<fieldset>`, handling and associating valiation errors, and more
+   * [Inaccessible version](https://codepen.io/jasonwebb/pen/VwZGwpQ/left/?editors=1000)
+   * [Accessible version](https://codepen.io/jasonwebb/pen/XWrPWGg/left?editors=1000)
+
 ## Packages used
 
 * [Reveal.js](https://github.com/hakimel/reveal.js/)
